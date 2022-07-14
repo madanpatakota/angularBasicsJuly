@@ -1,20 +1,14 @@
 import { Component } from '@angular/core';
 
+
+
+// <span></span>
+
 @Component({
-  selector: 'app-root',
+  selector: 'app-root-one',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
-
-
-
-
-
-
-
-
-
 
 // component is html + ts + css
 // Q) what is the component ts file?
