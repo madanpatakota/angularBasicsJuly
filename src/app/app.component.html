@@ -79,3 +79,74 @@ Techincal
 <app-custom-location></app-custom-location>
 
 <!-- now crete the register and then utilize -->
+
+
+
+<br>
+<hr>
+<!-- 
+Q) Can i take the property databinding and event databinding 
+
+to the same control?
+
+Textbox can i apply property datbibding and event databidig -->
+
+
+
+
+
+<!-- its tracing the keyboard event -->
+
+<!-- keyup keydown keypress -->
+
+<!-- mousescroll mouseup mousedown -->
+<!-- 
+click 
+
+dropdwon change -->
+
+<input  type="text" [value]="Name" 
+       (keydown)="monitorKeys($event)" />
+{{Name}}
+
+
+<!-- value + keydown -->
+
+
+==================================
+<hr>
+
+<!-- Q) whenever i am going to change the ngModel
+can i trace the value -->
+
+
+<!-- 
+     ()     ========> one way (event) databinding
+
+[()] property + event -->     
+
+
+<!-- ngmodel + ngmodelchange -->
+
+
+<!-- 
+[(ngModel)] -->
+
+<input  type="text" 
+[ngModel]="Location" 
+(ngModelChange) = "modelChanges($event)"
+/>
+
+{{Location}}
+
+
+
+<input  type="text" 
+[(ngModel)]="Employee" 
+/>
+{{Employee}}
+
+
+
+
+

@@ -19,8 +19,8 @@ import { Component } from '@angular/core'
 // 3. i have to add the css file
 // 4. i have to register this into the appmodule(bcci)
 
-
-
 export class CustomAppComponent{
+
+    name ="Madn"
 
 }

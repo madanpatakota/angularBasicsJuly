@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 
@@ -55,11 +56,51 @@ import { Component } from '@angular/core';
     console.log(c);
   }
 
+  //when ever if you do't want to execute the code after 
+
+  //some point
 
 
+  //timeout
+  // 1 sec 
+  // 2 sec
+  // 10 sec
 
+
+  monitorKeys($event:any){
+      // keys
+      console.log($event);
+      if($event.key === 'z'){
+        window.alert("Please do't enter the z value");
+        setTimeout(()=>{
+          this.Name = this.Name.replace('z','');
+          //console.log(this.Name)
+          //this.Name = "Madan"
+        },1000)
+        return;
+      }
+      
+  }
+
+  //    ========> one way (property) databinding
+
+  Location  = "Hyderabad"
+  modelChanges($event:any){
+     console.log($event);
+
+     this.Location = $event;
+    //  setTimeout(() => {
+     
+    //  }, 2000);
+
+  }
+
+
+  // function maths(a , b){
+
+  // }
   
-  
+  Employee = "John"
 
 
 }

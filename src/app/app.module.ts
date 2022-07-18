@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 
 // CustomAppComponent
 import {  CustomAppComponent } from './custom-app/customapp.component';
-
+import { CustomTwoAppComponent } from './custom-two-app/custom-two-app.component';
+import { FormsModule } from '@angular/forms';
 
 
 // import { iphone } from 'US';
@@ -13,10 +14,12 @@ import {  CustomAppComponent } from './custom-app/customapp.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CustomAppComponent
+    CustomAppComponent,
+    CustomTwoAppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
