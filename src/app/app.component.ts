@@ -103,4 +103,34 @@ import { Component } from '@angular/core';
   Employee = "John"
 
 
+  CustomerType:string = "temp";
+  Area :string="hyderabad";
+
+
+  pincode = "560033";
+
+
+
+  Locatoions = ["Hyderabad","Bangolore","Chennai"];
+
+
+  // for(var i = 0 , i<10; i++){
+  //    i 
+  // }
+  
+
+
+  //CustomerType == 'perminent' ? 'OK' : 'notOK';
+
+
+  // if(CustomerType == 'perminnet'{
+
+  // })
+
+  // else{
+
+  // }
+
+
+
 }
