@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import {  CustomAppComponent } from './custom-app/customapp.component';
 import { CustomTwoAppComponent } from './custom-two-app/custom-two-app.component';
 import { FormsModule } from '@angular/forms';
+import { CustomThreeComponent } from './custom-three/custom-three.component';
 
 
 // import { iphone } from 'US';
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     CustomAppComponent,
-    CustomTwoAppComponent
+    CustomTwoAppComponent,
+    CustomThreeComponent
   ],
   imports: [
     BrowserModule,
