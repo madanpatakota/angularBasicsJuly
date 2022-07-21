@@ -29,9 +29,23 @@ export class CustomThreeComponent {
 
 
   evtSubmitDesignation(){
-    console.log(this.customerDesignation);
+    console.log(this.customerDesignation?.nativeElement.value);
 
-    console.log(this.customerDesignation.nativeElement.value);
+
+    // if(this.customerDesignation != undefined){
+    //   console.log(this.customerDesignation?.nativeElement.value);
+    // }
+
+    // ?incase this.customerDesignation is undefined then skip the next activities
+
+    //const name = undefined;
+
+    // const name1 = "Angular";
+    // name1.
+
+
+    //this.customerDesignation.
+    //console.log(this.customerDesignation.nativeElement.value);
   }
 
   Name:string = "Angular";
@@ -48,8 +62,9 @@ export class CustomThreeComponent {
 // #CustomerDesignation/>
 
 //i did the setup here
+//or
 @ViewChild('CustomerDesignation')
-           customerDesignation:any;
+           customerDesignation: ElementRef<any> | undefined;
 
 
 

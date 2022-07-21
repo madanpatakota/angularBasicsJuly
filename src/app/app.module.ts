@@ -8,6 +8,7 @@ import {  CustomAppComponent } from './custom-app/customapp.component';
 import { CustomTwoAppComponent } from './custom-two-app/custom-two-app.component';
 import { FormsModule } from '@angular/forms';
 import { CustomThreeComponent } from './custom-three/custom-three.component';
+import { BootstrapFormComponent } from './bootstrap-form/bootstrap-form.component';
 
 
 // import { iphone } from 'US';
@@ -17,7 +18,8 @@ import { CustomThreeComponent } from './custom-three/custom-three.component';
     AppComponent,
     CustomAppComponent,
     CustomTwoAppComponent,
-    CustomThreeComponent
+    CustomThreeComponent,
+    BootstrapFormComponent
   ],
   imports: [
     BrowserModule,
