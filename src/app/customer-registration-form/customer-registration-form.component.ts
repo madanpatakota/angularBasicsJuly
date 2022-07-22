@@ -1,11 +1,11 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-bootstrap-form',
-  templateUrl: './bootstrap-form.component.html',
-  styleUrls: ['./bootstrap-form.component.css'],
+  selector: 'app-customer-registration-form',
+  templateUrl: './customer-registration-form.component.html',
+  styleUrls: ['./customer-registration-form.component.css'],
 })
-export class BootstrapFormComponent implements OnInit {
+export class CustomerRegistrationFormComponent implements OnInit {
   constructor() {}
 
   statesList = [
@@ -43,6 +43,8 @@ export class BootstrapFormComponent implements OnInit {
   sZipCode = "";
   sState = "";
 
+  CustomerForm = {};
+
 
 
   Submit(){
@@ -53,6 +55,20 @@ export class BootstrapFormComponent implements OnInit {
     this.sState= this.vState?.nativeElement.value;
     this.sCity  = this.vCity?.nativeElement.value;
     this.sZipCode  = this.vZipcode?.nativeElement.value;
+
+
+    this.CustomerForm = {
+       'Email' : this.sEmail,
+       'Password' : this.sPassword,
+       'Address' : this.sAddress,
+       'SecondAddress' : this.sSecondAddress,
+       'State' : this.sState,
+       'City' : this.sCity,
+       'ZipCode' : this.sZipCode
+    }
+
+
+
   }
 
 

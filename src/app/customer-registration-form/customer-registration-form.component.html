@@ -62,11 +62,23 @@
     </div>
   </form>
   <hr />
-  <p>Email is : {{ sEmail }}</p>
-  <p>Password is : {{ sPassword }}</p>
-  <p>Address is : {{ sAddress }}</p>
-  <p>Address 2 is : {{ sSecondAddress }}</p>
-  <p>City is : {{ sState }}</p>
-  <p>State is : {{ sCity }}</p>
-  <p>Zip is : {{ sZipCode }}</p>
+
 </div>
+
+
+
+
+
+<!-- <input [type]="text" /> -->
+
+<!-- <input type="" -->
+
+<app-customer-details 
+[test] = "'SampleTestData' " 
+[registrionFormData] = "CustomerForm">
+</app-customer-details>
+
+
+<!-- <human-body [head] 
+    [body] [foot] 
+    /></human-body> -->

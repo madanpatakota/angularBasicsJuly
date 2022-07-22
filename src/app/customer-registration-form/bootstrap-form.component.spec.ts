@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BootstrapFormComponent } from './bootstrap-form.component';
+import { BootstrapFormComponent } from './customer-registration-form.component';
 
 describe('BootstrapFormComponent', () => {
   let component: BootstrapFormComponent;

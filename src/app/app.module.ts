@@ -8,7 +8,8 @@ import {  CustomAppComponent } from './custom-app/customapp.component';
 import { CustomTwoAppComponent } from './custom-two-app/custom-two-app.component';
 import { FormsModule } from '@angular/forms';
 import { CustomThreeComponent } from './custom-three/custom-three.component';
-import { BootstrapFormComponent } from './bootstrap-form/bootstrap-form.component';
+import { CustomerRegistrationFormComponent } from './customer-registration-form/customer-registration-form.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 
 // import { iphone } from 'US';
@@ -19,7 +20,8 @@ import { BootstrapFormComponent } from './bootstrap-form/bootstrap-form.componen
     CustomAppComponent,
     CustomTwoAppComponent,
     CustomThreeComponent,
-    BootstrapFormComponent
+    CustomerRegistrationFormComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     BrowserModule,
