@@ -61,23 +61,28 @@
       </button>
     </div>
   </form>
+<br>
+  <div>Feedback from the Customer details</div>
+  <p><strong>Email Feedback is :</strong> {{ receivedFeedbackInfo.EmailFeedback }}</p>
   <hr />
-
 </div>
-
-
-
-
 
 <!-- <input [type]="text" /> -->
 
 <!-- <input type="" -->
 
+<!-- () -->
+<!-- $event which represents the feedbackInformation -->
+<!-- 
+i want to open this component
+when i click submit button -->
 <app-customer-details 
-[test] = "'SampleTestData' " 
-[registrionFormData] = "CustomerForm">
+  *ngIf="isSubmitted"
+  [test]="'SampleTestData'"
+  [registrionFormData]="CustomerForm"
+  (evtFeedbackInformation)="receivedFeedbackData($event)"
+>
 </app-customer-details>
-
 
 <!-- <human-body [head] 
     [body] [foot] 

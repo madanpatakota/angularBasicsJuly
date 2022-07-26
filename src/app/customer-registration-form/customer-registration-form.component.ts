@@ -45,7 +45,10 @@ export class CustomerRegistrationFormComponent implements OnInit {
 
   CustomerForm = {};
 
+  receivedFeedbackInfo:any = {};
 
+
+  isSubmitted:boolean = false;
 
   Submit(){
     this.sEmail  = this.vEmail?.nativeElement.value;
@@ -67,8 +70,14 @@ export class CustomerRegistrationFormComponent implements OnInit {
        'ZipCode' : this.sZipCode
     }
 
+    this.isSubmitted = true;
+  }
 
 
+  
+  receivedFeedbackData(info:any){
+    console.log(info);
+    this.receivedFeedbackInfo = info;
   }
 
 

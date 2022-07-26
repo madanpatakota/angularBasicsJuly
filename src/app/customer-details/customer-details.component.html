@@ -6,18 +6,59 @@
   Box 564, Disneyland<br>
   USA
   </address> -->
-<div style="padding-left:300px;padding-right:100px;">
-  <p class="text-primary text-capitalize fs-4">Email is : {{ ICForm.Email }}</p>
-  <p class="text-primary text-capitalize fs-4">Password is : {{ ICForm.City }}</p>
-  <p class="text-primary text-capitalize fs-4">Address is : {{ ICForm.Address }}</p>
-  <p class="text-primary text-capitalize fs-4">
+  <!-- fs means fontsize -->
+<div class="bg-ligt" style="padding-left: 200px;padding-right: 100px;margin-top: 25px;">
+  <!-- <p class="text-success text-capitalize fs-5">Email is : {{ ICForm.Email }}</p>
+  <p class="text-success text-capitalize fs-5">Password is : {{ ICForm.City }}</p>
+  <p class="text-success text-capitalize fs-5">Address is : {{ ICForm.Address }}</p>
+  <p class="text-success text-capitalize fs-5">
     Address 2 is : {{ ICForm.Password }}
   </p>
-  <p class="text-primary text-capitalize fs-4">City is : {{ ICForm.SecondAddress }}</p>
-  <p class="text-primary text-capitalize fs-4">State is : {{ ICForm.State }}</p>
-  <p class="text-primary text-capitalize fs-4 fw-bold">
+  <p class="text-success text-capitalize fs-5">City is : {{ ICForm.SecondAddress }}</p>
+  <p class="text-success text-capitalize fs-5">State is : {{ ICForm.State }}</p>
+  <p class="text-success text-capitalize fs-5">
     Zip is : {{ ICForm.ZipCode }}
-  </p>
+  </p> -->
+
+  <table class="table table-stripped table-dark table-hover">
+    <!-- Header Section -->
+    <thead> 
+      <!-- Header Row -->
+      <tr>  
+        <!-- Each th Cell -->
+        <th>Email</th>
+        <th>City</th>
+        <th>Address</th>
+        <th>Second Address</th>
+        <th>State</th>
+        <th>Zip Code</th>
+      </tr>
+    </thead>
+    <!-- body Section -->
+    <tbody>
+      <!-- Rows Section -->
+      <tr *ngFor="let item of ICForms">
+        <td>{{item?.Email}}</td>
+        <td>{{item?.City}}</td>
+        <td>{{item?.Address}}</td>
+        <td>{{item?.SecondAddress}}</td>
+        <td>{{item?.State}}</td>
+        <td>{{item?.ZipCode}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <button class="btn btn-warning" (click)="evtFeedBack()">Feedback</button>
+  </div>
 </div>
+
+<!-- Task is converting to the paragraphs into the table -->
+<!-- *ngFor -->
+<!-- table structrue -->
+
+<!-- table is nothing but collection of rows -->
+
+
+
 
 
