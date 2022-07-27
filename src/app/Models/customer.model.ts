@@ -7,4 +7,5 @@ export class Customer{
     'State' :string = "";
     'City' :string = "";
     'ZipCode':string = "";
+    'Comments':string = "";
 }

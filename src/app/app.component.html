@@ -1,3 +1,41 @@
 <!-- <app-custom-two-app></app-custom-two-app> -->
 <!-- <app-custom-three></app-custom-three> -->
-<app-customer-registration-form></app-customer-registration-form>
+
+<!-- 
+<div>
+    <input type="text" />
+</div>
+
+<label>email</label> -->
+
+<!-- 
+1. where i am writing the content ?
+A : Insideof the compoennt.
+
+
+2. Onwhich file?
+Where ever compnent has declared
+
+3. where i did declared
+A : app compoennt  -->
+
+<app-customer-registration-form>
+    
+    <div class="col-md-6">
+        <label for="inputComments" class="form-label">Comments</label>
+        <textarea rows="3" class="form-control" id="inputComments" #txtComments></textarea>
+      </div>
+      <div class="col-md-6">
+        <label for="default" class="form-label">DOB Place</label>
+        <input value="Karnataka" class="form-control" 
+        id="inputComments" #DOBPlace />
+      </div>
+</app-customer-registration-form>
+
+<!-- 
+xyz.component.html
+<app-customer-registration-form>
+   <label></label>
+</app-customer-registration-form> -->
+
+
