@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, ContentChild, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ContentChild, ElementRef, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { throwError } from 'rxjs';
 
 @Component({
@@ -11,6 +11,7 @@ export class CustomerRegistrationFormComponent implements
   constructor() {}
   
  
+  isLoaded = false;
 
 
   statesList = [
@@ -29,7 +30,13 @@ export class CustomerRegistrationFormComponent implements
   ];
 
   //Routers concepts
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //console.log("compoennt" , this.vEmail?.nativeElement.value)
+    let name = this.vEmail?.nativeElement.value as string;
+    if(name.indexOf("@gmail.com") == -1){
+      this.EmailId = this.EmailId + "@gmail.com";
+    }
+  }
 
 
 
@@ -53,7 +60,7 @@ export class CustomerRegistrationFormComponent implements
   // ngAfterViewInit()
   ngAfterViewInit(): void {
     let name = this.vEmail?.nativeElement.value as string;
-    if(name.indexOf("@gmail.com") > -1){
+    if(name.indexOf("@gmail.com") == -1){
       this.EmailId = this.EmailId + "@gmail.com";
     }
   }
@@ -75,6 +82,7 @@ export class CustomerRegistrationFormComponent implements
 
   shortKeyDOBPlace = "";
   //i can control or i can take everythinf of the contentchild related data...
+  // contnet intlization after
   ngAfterContentInit(): void {
     if(this.cDOBPlace?.nativeElement.value == "Karnataka"){
       this.shortKeyDOBPlace = "KA";
@@ -83,7 +91,6 @@ export class CustomerRegistrationFormComponent implements
 
 
   // whatever i am receing the content data i need the control
-
   sEmail = "";
   sPassword ="";
   sAddress = "";
@@ -92,12 +99,8 @@ export class CustomerRegistrationFormComponent implements
   sZipCode = "";
   sState = "";
   sComments = "";
-
   CustomerForm = {};
-
   receivedFeedbackInfo:any = {};
-
-
   isSubmitted:boolean = false;
 
   Submit(){
@@ -120,9 +123,7 @@ export class CustomerRegistrationFormComponent implements
        'City' : this.sCity,
        'ZipCode' : this.sZipCode,
        'Comments' : this.sComments
-
     }
-
     this.isSubmitted = true;
   }
 
@@ -132,6 +133,44 @@ export class CustomerRegistrationFormComponent implements
     console.log(info);
     this.receivedFeedbackInfo = info;
   }
+
+  // i have provided bootstrap urls...   50% pass 
+  //core basics of angular
+  //elementref , viewcontainerref , templateref
+  //contentchild , viewchild
+  //ngonchanges  , ngafterviewinit , ngaftercontent init
+  //input and output
+  //ngif , ngfor , ngstyle , ngclass
+  //ng-container , ng-template , ngcontent
+  //github branches
+  //eventbinding,propertydatabinding
+  //localref , ngmodel , ngmodelChange , htmlinputelement
+  //twoway databinding
+  //eventemitter - emit 
+  //output ($event)
+
+  //monday ---- > services -- 2 or 3 days
+   
+
+
+
+
+  
+
+  @ViewChild('container' ,
+   { read : ViewContainerRef}) 
+  container:ViewContainerRef|undefined;
+
+
+  @ViewChild('temp1')
+  temp1 !: TemplateRef<any>;
+
+
+  evtPushtTemplate(){
+      this.container?.
+      createEmbeddedView(this.temp1);
+  }
+
 
 
 

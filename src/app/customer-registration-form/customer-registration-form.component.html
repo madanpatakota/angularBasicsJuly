@@ -2,10 +2,14 @@
   <form class="row g-3">
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
-      <input name="Email" type="email" 
-             [ngModel]="EmailId" 
-             class="my-form-control"
-       id="inputEmail4" #email />
+      <input
+        name="Email"
+        type="email"
+        [ngModel]="EmailId"
+        class="my-form-control"
+        id="inputEmail4"
+        #email
+      />
     </div>
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Password</label>
@@ -57,7 +61,7 @@
     <ng-content></ng-content>
     <!-- <ng-content></ng-content> -->
 
-    <label>DOB Place  : {{shortKeyDOBPlace}}</label>
+    <label>DOB Place : {{ shortKeyDOBPlace }}</label>
     <div class="col-12">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck" />
@@ -70,15 +74,16 @@
       </button>
     </div>
   </form>
-<br>
+  <br />
   <div>Feedback from the Customer details</div>
-  <p><strong>Email Feedback is :</strong> {{ receivedFeedbackInfo.EmailFeedback }}</p>
+  <p>
+    <strong>Email Feedback is :</strong>
+    {{ receivedFeedbackInfo.EmailFeedback }}
+  </p>
   <hr />
 </div>
 
-
 <!-- //it will be sit here -->
-
 
 <!-- <input [type]="text" /> -->
 
@@ -89,13 +94,33 @@
 <!-- 
 i want to open this component
 when i click submit button -->
-<app-customer-details 
+<app-customer-details
   *ngIf="isSubmitted"
   [test]="'SampleTestData'"
   [registrionFormData]="CustomerForm"
   (evtFeedbackInformation)="receivedFeedbackData($event)"
 >
 </app-customer-details>
+
+<!-- <input type="checkbox" /> -->
+<div *ngIf="isLoaded; else temp">Page is Loaded</div>
+
+<ng-template #temp>
+  <div>Page is not loaded</div>
+</ng-template>
+
+<ng-template #temp1>
+  <div>
+    <input type="text" />
+  </div>
+</ng-template>
+
+<ng-container #container> 
+
+</ng-container>
+
+<button class="btn btn-primary" 
+(click)="evtPushtTemplate()">Load</button>
 
 <!-- <human-body [head] 
     [body] [foot] 
